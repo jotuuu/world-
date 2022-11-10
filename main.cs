@@ -8,7 +8,7 @@ namespace апокалипсис
     // Class AntiWorld -- основной класс, из которого будут наследоваться класс Apocalipsis.
     public class AntiWorld
     {
-        public virtual void deeletethisisworld()
+        public virtual void XXX()
         {
             Console.WriteLine("Hello World! Добро пожаловать в приложение, которое расскажет, как быстро тебя уничтожит человечество! \n\nЯ могу предложить тебе выбрать вариант развития событий, а потом расчитать, как быстро случится конец света.\n\n  Продолжим? (1 - да/ 0 - нет)");
             int otvet = Convert.ToInt32(Console.ReadLine());
@@ -30,9 +30,9 @@ namespace апокалипсис
     // Apocalipsis -- наследуемый класс, из которого будет также наследоваться класс EndWorld.
     public class Apocalipsis : AntiWorld
     {
-        public override void deeletethisisworld()
+        public override void XXX()
         {
-            base.deeletethisisworld();
+            base.XXX();
             Console.WriteLine("\n\nЧто же, вам предстоит давать ответы на дабавление происходящего в мире \n\nпо принципу 1 - включаем/0 - не включаем \n\nисходя из ваших ответов будут совершены подсчеты, насколько мир близок к концу.");
 
             Console.WriteLine("\nКоличество выбросов вырастает с каждым годом, минимум в два раза: ");
@@ -127,25 +127,21 @@ namespace апокалипсис
 
             int w = a + b + c + d + e + f;
 
-            if (w > 99)
-            {
+            if ( w > 99 ) {
 
                 Console.WriteLine("\n\nCлушайте, ну с таким набором я в шоке, что вы еще можете использовать компьютер и считать что-то.");
             }
-            else if (w > 74 && w < 99)
-            {
+            else if (w > 74 && w < 99) {
                 Console.WriteLine("\n\nНе думаю, что у вас осталось много времени, чтобы тратить его на какие-то программки.");
             }
-            else if (w > 49 && w < 75)
-            {
+            else if (w > 49 && w < 75) {
                 Console.WriteLine("\n\nНет, ну, шансы все исправить у вас еще есть, но советую попторопиться, если не хотите повторить судьбу динозавров.");
             }
             else if (w > 24 && w < 50)
             {
                 Console.WriteLine("\n\nПару сотен лет в запасе еще есть, но такими темпами они могут быть борбой за выживание, стоит задуматься.");
             }
-            else
-            {
+            else {
                 Console.WriteLine("\n\nОтлично, у вас еще есть время на жизнь, проблемы есть конечно, но не такие значительные, все ок.");
             }
 
@@ -154,30 +150,13 @@ namespace апокалипсис
         // EndWorld -- наследуемый из предыдущего класс, подсчитывающий сколько до конца света.   
         public class EndWorld : Apocalipsis
         {
-            public override void deeletethisisworld()
+            public override void XXX()
             {
-
+               
                 Console.WriteLine("\nвообще, все это шутки конечно, но стоит порой задуматься над тем, как стремительно мы уничтожаем нашу планету, \n\nМарс вроде бы еще не готов для нашего переселения, поэтому надо быть осторжнее. ");
-                Console.WriteLine(@"
-а теперь посмотрите на котика, пока вы еще живы.)
-                                                                                
-⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⠄⠄⠄⢰⣷⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⠄⣠⣾⣿⣿⣷⣦⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⣠⣿⣿⣿⣿⣿⣿⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⠄⠛⠿⣿⣿⣿⣿⣿⣆⠄⠄⠄⠄⠄⣴⣿⣿⣆⠄⠄⠄
-⠄⠄⠄⠄⠄⣰⣿⣿⣿⣿⣿⣿⣷⣄⠄⠄⠄⣿⣿⠛⠉⠄⠄⠄
-⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠄⠘⣿⡆⠄⠄⠄⠄
-⠄⠄⠄⠄⠄⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠸⣿⡀⠄⠄⠄
-⠄⠄⠄⠄⠄⠄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⣿⡇⠄⠄⠄
-⠄⠄⠄⠄⠄⠄⢸⣿⡟⣿⣿⣿⣿⣿⣿⣿⣿⡇⢀⣿⠇⠄⠄⠄
-⠄⠄⠄⠄⠄⢀⣸⡿⢁⣘⣿⣿⣿⣿⣿⣿⣿⣇⣼⠋⠄⠄⠄⠄
-⠄⠄⠄⠄⠄⠻⠿⠓⠿⠿⠿⠿⠿⠿⠿⠿⠿⠛⠁⠄⠄⠄⠄⠄
-⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-              
-");
             }
         }
+
 
         /// Program: used to execute the method.
         public class Program
@@ -185,11 +164,11 @@ namespace апокалипсис
             private static void Main(string[] args)
             {
                 AntiWorld a = new Apocalipsis();
-                a.deeletethisisworld();
+                a.XXX();
                 Console.WriteLine("");
                 Apocalipsis b = new EndWorld();
-                b.deeletethisisworld();
-                _ = Console.ReadKey();
+                b.XXX();
+                Console.ReadKey();
             }
         }
     }
